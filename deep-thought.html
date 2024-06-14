@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="deep-thought.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1 class="deep">DEEP</h1>
+            <h1 class="thought">THOUGHT</h1>
+        </div>
+        <div class="icons">
+            <a href="index.html"><span>Home</span></a>
+            <a href="about.html"><span>About</span></a>
+            <a href="#"><span>Settings</span></a>
+            <a href="#"><span>Notification</span></a>
+            <a href="#"><span>⋮</span></a>
+        </div>
+    </nav>
+    
+    <div class="wrapper">
+        <div class="main">
+            <div class="content">
+                <div class="heading-container">
+                    <h2 class="heading">Technical Project Management</h2>
+                    <button class="submit-btn">Submit Task</button>
+                </div>
+                <div class="new-div">
+                    <div class="new-div-heading">Explore the world of managment</div>
+                    <div class="new-div-content">As a project manager you play an important role in leading the project. Do you want to manage every step in your life?  </div>
+                </div>
+            </div>
+            <div class="scrollable-divs">
+                <div class="scrollable-div">
+                    <div class="div-heading">Technical project managment <span class="material-symbols-outlined info-icon">info</span></div>
+                    <!-- Content for div 1 -->
+                    <div>
+                        <p><strong>Description:</strong> a youtube video</p>
+                    </div>
+                    <div>
+                        <a href="https://example.com">
+                            <img src="example.jpg" alt="Example Image">
+                        </a>
+                    </div>
+                </div>
+                <div class="scrollable-div">
+                    <div class="div-heading">Threadbuild <span class="material-symbols-outlined info-icon">info</span></div>
+                    <!-- Content for div 2 -->
+                    <div class="dropdown-btn" onclick="toggleDropdown('dropdown-1')">Thread A</div>
+                    <div id="dropdown-1" class="dropdown-content">
+                        <textarea placeholder="Sub Thread 1"></textarea>
+                        <textarea placeholder="Sub Interpretation 1"></textarea>
+                    </div>
+                </div>
+                <div class="scrollable-div">
+                    <div class="div-heading">Structure You Pointers <span class="material-symbols-outlined info-icon">info</span></div>
+                    <!-- Content for div 3 -->
+                    <p><strong>Description:</strong> Write a 400-500 word article, from your thread. Publish your understanding, and showcase your learning to the entire world.</p>
+                    <div>
+                        <input type="text" placeholder="Title" style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                        <textarea placeholder="Content" style="width: 100%; height: 200px; padding: 10px;"></textarea>
+                    </div>
+                </div>
+                <div class="scrollable-div">
+                    <div class="div-heading">4SA Method <span class="material-symbols-outlined info-icon">info</span></div>
+                    <!-- Content for div 4 -->
+                    <div class="dropdown-btn" onclick="toggleDropdown('dropdown-2')">Introduction</div>
+                    <div id="dropdown-2" class="dropdown-content">
+                        <p>The 4SA Method, How to bring an idea into process?</p>
+                    </div>
+                    <div class="dropdown-btn" onclick="toggleDropdown('dropdown-3')">Thread A</div>
+                    <div id="dropdown-3" class="dropdown-content">
+                        <p>How are you going to develop your strategy? Which method are you going to use to develop a strategy? What if the project is lengthy?</p>
+                    </div>
+                    <div class="dropdown-btn" onclick="toggleDropdown('dropdown-4')">Example 1</div>
+                    <div id="dropdown-4" class="dropdown-content">
+                        <p>You have a concept; how will you put it into practice?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="side-pannel-toggle" type="button">
+            <span class="material-symbols-outlined icon-open">arrow_forward</span>
+            <span class="material-symbols-outlined icon-close">arrow_back</span>
+        </button>
+        <div class="side-pannel">
+            <div class="side-bar-heading">
+                Journey board
+            </div>
+            <div class="journey-board">
+                Explore The World Management
+            </div>
+            Technical Project Management
+        </div>
+    </div>
+   
+    <script>
+        document.querySelector(".side-pannel-toggle").addEventListener("click", () => {
+            document.querySelector(".wrapper").classList.toggle("side-pannel-open");
+        });
+
+        function toggleDropdown(id) {
+            var dropdown = document.getElementById(id);
+            dropdown.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

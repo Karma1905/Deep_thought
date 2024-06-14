@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(228, 227, 227);
+    padding: 10px 20px;
+}
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+.navbar .logo h1 {
+    margin: 5px;
+}
+.navbar .logo .deep {
+    color: black;
+    font-weight: normal;
+}
+.navbar .logo .thought {
+    color: blue;
+    font-weight: bold;
+}
+.navbar .icons {
+    display: flex;
+    align-items: center;
+}
+.navbar .icons a {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.navbar .icons a:hover {
+    color: #666;
+}
+.content {
+    display: flex;
+    flex-direction: column; /* Change to column to stack elements vertically */
+    padding: 0px;
+    transition: margin-left 0.3s;
+}
+.heading-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.heading {
+    color: blue;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.new-div {
+    background-color: rgb(213, 211, 211);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.submit-btn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.submit-btn:hover {
+    background-color: darkblue;
+}
+.wrapper {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+.main {
+    flex-grow: 1;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+.side-pannel-toggle {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    color: black;
+    background-color: white;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 10px; 
+    z-index: 2;
+}
+.side-pannel-toggle:hover {
+   background: black;
+   color: white;
+}
+.icon-close {
+    display: none;
+}
+.side-pannel {
+    display: none;
+    width: 200px;
+    height: 50vh; 
+    flex-shrink: 0;
+    padding: 20px;
+    color: white;
+    background: grey;
+    box-shadow: 0 0 10px rgba(0,0,0,0.35);
+    position: absolute;
+    top: 0;
+    left: -200px; 
+    z-index: 1;
+    padding-left: 60px;
+}
+.side-pannel-open .side-pannel {
+    display: block;
+    left: 0;
+}
+.side-pannel-open .icon-open {
+    display: none;
+}
+.side-pannel-open .icon-close {
+    display: inline;
+}
+.side-pannel-open .main {
+    margin-left: 200px;
+}
+.side-bar-heading {
+    background: black;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+.journey-board {
+    font-weight: bolder;
+    margin-bottom: 10px;
+    color: black;
+}
+.scrollable-divs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 1000px;
+    margin-top: 20px; /* Add margin from the top */
+    width: 1000px;
+    margin-left: 50px;
+}
+.scrollable-div {
+    flex: 1 1 calc(45% - 10px); /* Decrease size of the divs */
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    height: 40%; /* Adjust height to decrease the size */
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0,0,0,0.35);
+    border-radius: 20px;
+}
+.new-div-heading{
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.div-heading{
+    margin-bottom: 20px;
+    background: black;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 150px;
+    border-radius: 5px;
+    margin-top: -10px;
+    margin-left: -12px;
+    margin-right: -12px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.info-icon {
+    font-size: 20px;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+.dropdown-content textarea {
+    width: 100%;
+    margin-top: 10px;
+}
+.dropdown-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.dropdown-btn:hover {
+    background-color: #ddd;
+}
+.dropdown-btn::after {
+    content: '▼';
+    font-size: 12px;
+    margin-left: 10px;
+}
+.dropdown-content.show {
+    display: block;
+}
